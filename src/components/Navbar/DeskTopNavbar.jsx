@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NAME, LOGO, NAV_LIST } from "../../data/homeData";
 import { COLORS } from "../../theme/global.theme";
+import { ArrowUpRight, SquareText } from "lucide-react";
 
 const DeskTopNavbar = () => {
   const [active, setActive] = useState(0);
@@ -43,9 +44,11 @@ const DeskTopNavbar = () => {
         })}
       </ul>
       <div
-        className={`border px-3 py-1 text-sm font-mono text-accent bg-bg-dark hover:bg-accent hover:text-bg-dark cursor-pointer rounded-sm`}
+        className={`flex items-center gap-2 border px-3 py-1 text-sm font-mono text-accent bg-bg-dark hover:bg-accent hover:text-bg-dark cursor-pointer rounded-sm`}
       >
+        <SquareText size={14} />
         {"Resume"}
+        <ArrowUpRight size={14} />
       </div>
     </nav>
   );
