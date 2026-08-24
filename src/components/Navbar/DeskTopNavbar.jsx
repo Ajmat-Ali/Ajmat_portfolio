@@ -1,0 +1,54 @@
+import { useState } from "react";
+import { NAME, LOGO, NAV_LIST } from "../../data/homeData";
+import { COLORS } from "../../theme/global.theme";
+
+const DeskTopNavbar = () => {
+  const [active, setActive] = useState(0);
+  return (
+    <nav
+      className="border border-white-500 flex justify-between items-center flex-wrap p-5 w-[80%] m-auto
+     | max-lg:w-[95%]"
+    >
+      <div className="group flex gap-x-3 items-center cursor-pointer">
+        <p
+          className={`text-accent font-mono font-[600] text-[18px] bg-[#131826] px-2 py-1 
+          border-2 border-gray-800 group-hover:border-accent-hover rounded-md`}
+        >
+          {" "}
+          {LOGO}{" "}
+        </p>
+        <div className="flex items-center gap-x-2 ">
+          <p className="font-display font-[700] text-[18px]"> {NAME}</p>
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500"></span>{" "}
+        </div>
+      </div>
+      <ul className="flex flex-wrap gap-x-5 text-[14px] font-semibold leading-[20px] ">
+        {NAV_LIST.map((ele, ind) => {
+          return (
+            <li
+              key={ind}
+              onClick={(e) => {
+                setActive(ind);
+              }}
+              className={`text-[#8B93A7] hover:text-[#E4E7EC] cursor-pointer `}
+              style={{ color: ind === active ? COLORS["primary"] : undefined }}
+            >
+              {ele.name}
+
+              <span
+                className={`h-[1.5px] w-full  bg-[#3ECF8E] ${ind === active ? "block" : ""}`}
+              ></span>
+            </li>
+          );
+        })}
+      </ul>
+      <div
+        className={`border px-3 py-1 text-sm font-mono text-accent bg-bg-dark hover:bg-accent hover:text-bg-dark cursor-pointer rounded-sm`}
+      >
+        {"Resume"}
+      </div>
+    </nav>
+  );
+};
+
+export default DeskTopNavbar;
