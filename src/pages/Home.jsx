@@ -2,6 +2,7 @@ import MobileScreenNavbar from "../components/Navbar/MobileScreenNavbar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Skill from "../components/Skill";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <div className="w-[80%]  m-auto max-lg:w-[95%] ">
         <Hero />
         <About />
+        <Skill />
       </div>
     </div>
   );

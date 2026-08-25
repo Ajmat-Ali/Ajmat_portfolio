@@ -2,7 +2,7 @@ import { ABOUT_ME } from "../data/homeData";
 
 const About = () => {
   return (
-    <div className="flex py-20 justify-between max-md:flex-col gap-y-10">
+    <div className="flex py-20 justify-between max-md:flex-col gap-y-10 border-b border-border-subtle">
       <div className="flex flex-col flex-1  gap-y-5 ">
         <p className="font-mono font-[400px] text-sm text-accent uppercase">
           {ABOUT_ME.index}
@@ -37,7 +37,7 @@ const About = () => {
             responses.
           </p>
         </div>
-        <div className="flex justify-around font-mono text-text-primary  text-[12px] flex-wrap gap-y-5 | max-md:text-sm">
+        <div className="flex justify-around font-mono text-text-primary  text-[12px] flex-wrap gap-y-5 | max-md:text-sm | max-sm:hidden">
           {ABOUT_ME.tags.map((tag) => {
             const Icon = tag.icon;
             return (
@@ -56,7 +56,7 @@ const About = () => {
           <h2 className="font-mono text-sm text-text-muted border-b- border-border-subtle py-4 ">
             {ABOUT_ME.card.cardTitle}
           </h2>
-          <div>
+          <div className="">
             {ABOUT_ME.card.stats.map((stat) => {
               return (
                 <div className="flex justify-between py-4 text-sm text-text-muted border-t border-border-subtle">
