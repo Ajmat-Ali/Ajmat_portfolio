@@ -1,3 +1,5 @@
+import { CodeXml, Database, Menu, MonitorSmartphone, X } from "lucide-react";
+
 const NAME = "Ajmat Ali";
 const LOGO = "AA";
 
@@ -60,4 +62,29 @@ const HERO_CODE = {
   ],
 };
 
-export { NAME, NAV_LIST, LOGO, HERO_CODE };
+// ============================== ABout Me =============================
+
+const ABOUT_ME = {
+  index: "01. Background & Direction",
+  title: "About Me",
+
+  tags: [
+    { icon: CodeXml, text: "Deterministic APIs" },
+    { icon: Database, text: "Structured Schemas" },
+    { icon: MonitorSmartphone, text: "Responsive UI" },
+  ],
+  card: {
+    cardTitle: "Key Metrics & Focus",
+    stats: [
+      { title: "Projects Built", value: "4+" },
+      { title: "Core Specialization", value: "MERN Stack" },
+      { title: "Active Focus", value: "DSA & System Design" },
+    ],
+    goal: {
+      title: "Goal:",
+      data: " Seeking a Junior / Associate Full Stack Developer role where I can contribute to high-impact production codebases and learn alongside experienced engineers.",
+    },
+  },
+};
+
+export { NAME, NAV_LIST, LOGO, HERO_CODE, ABOUT_ME };
