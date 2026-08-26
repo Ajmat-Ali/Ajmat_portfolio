@@ -43,13 +43,15 @@ const Hero = () => {
               <ArrowUpRight size={14} />
             </button>
           </a>
-          <button
-            onClick={handleResumeClick}
-            className="font-mono text-sm border border-[#151A2A] px-5 py-3 cursor-pointer 
+          <a target="_blank">
+            <button
+              onClick={handleResumeClick}
+              className="font-mono text-sm border border-[#151A2A] px-5 py-3 cursor-pointer 
           hover:text-accent hover:border-accent max-sm:text-[13px] max-sm:px-3 "
-          >
-            Download Resume
-          </button>
+            >
+              Download Resume
+            </button>
+          </a>
         </div>
         <p className="font-mono text-[12px] text-[#8B93A7] mt-10 flex items-center gap-x-3 border-t border-t-[#141A28] pt-4 w-max">
           <span className="block h-2 w-2 bg-accent rounded-full animate-pulse "></span>

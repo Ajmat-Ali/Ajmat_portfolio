@@ -138,22 +138,27 @@ const Contacts = () => {
                   </div>
                 </div>
               </a>
-
-              <button
-                type="button"
+              <a
+                href={CONTACT.developerProfile.resume}
+                target="_blank"
                 onClick={handleResumeClick}
-                className="p-4 rounded-lg bg-[#131826] border border-[#1E2638] hover:border-[#3ECF8E] transition-all group flex flex-col justify-between text-left cursor-pointer"
               >
-                <FileText className="w-5 h-5 text-[#3ECF8E] mb-4" />
-                <div>
-                  <div className="text-xs font-mono text-[#8B93A7]">
-                    Curriculum Vitae
+                <button
+                  type="button"
+                  // onClick={handleResumeClick}
+                  className="p-4 rounded-lg bg-[#131826] border border-[#1E2638] hover:border-[#3ECF8E] transition-all group flex flex-col justify-between text-left cursor-pointer"
+                >
+                  <FileText className="w-5 h-5 text-[#3ECF8E] mb-4" />
+                  <div>
+                    <div className="text-xs font-mono text-[#8B93A7]">
+                      Curriculum Vitae
+                    </div>
+                    <div className="text-sm font-medium text-[#3ECF8E]">
+                      View Resume
+                    </div>
                   </div>
-                  <div className="text-sm font-medium text-[#3ECF8E]">
-                    View Resume
-                  </div>
-                </div>
-              </button>
+                </button>
+              </a>
             </div>
           </div>
 

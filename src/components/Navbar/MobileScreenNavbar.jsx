@@ -3,6 +3,7 @@ import { NAME, LOGO, NAV_LIST } from "../../data/homeData";
 import { COLORS } from "../../theme/global.theme";
 import { Menu, X } from "lucide-react";
 import handleResumeClick from "../../utils/resumeDownload";
+import { CONTACT } from "../../data/contactData";
 
 const MobileScreenNavbar = () => {
   const [openItems, setOpenItems] = useState(false);
@@ -59,7 +60,11 @@ const MobileScreenNavbar = () => {
               );
             })}
           </ul>
-          <a onClick={handleResumeClick}>
+          <a
+            href={CONTACT.developerProfile.resume}
+            target="_blank"
+            onClick={handleResumeClick}
+          >
             <div
               className={` px-3 py-1 text-sm  text-accent 
               cursor-pointer rounded-sm`}

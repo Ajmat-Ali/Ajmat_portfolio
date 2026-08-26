@@ -5,6 +5,7 @@ import { ArrowUpRight, SquareText } from "lucide-react";
 import { useActiveSection } from "../../hook/useActiveSection";
 
 import handleResumeClick from "../../utils/resumeDownload";
+import { CONTACT } from "../../data/contactData";
 
 const DeskTopNavbar = () => {
   const [active, setActive] = useState(0);
@@ -57,7 +58,11 @@ const DeskTopNavbar = () => {
         })}
       </ul>
       <div>
-        <a onClick={handleResumeClick}>
+        <a
+          href={CONTACT.developerProfile.resume}
+          target="_blank"
+          onClick={handleResumeClick}
+        >
           <div
             className={`flex items-center gap-2 border px-3 py-1 text-sm font-mono text-accent bg-bg-dark hover:bg-accent hover:text-bg-dark cursor-pointer rounded-sm`}
           >
