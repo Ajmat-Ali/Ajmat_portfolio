@@ -26,20 +26,24 @@ const DeskTopNavbar = () => {
       <ul className="flex flex-wrap gap-x-5 text-[14px] font-semibold leading-[20px] ">
         {NAV_LIST.map((ele, ind) => {
           return (
-            <li
-              key={ind}
-              onClick={(e) => {
-                setActive(ind);
-              }}
-              className={`text-[#8B93A7] hover:text-[#E4E7EC] cursor-pointer `}
-              style={{ color: ind === active ? COLORS["primary"] : undefined }}
-            >
-              {ele.name}
+            <a href={ele.link} className="scroll-mt-24">
+              <li
+                key={ind}
+                onClick={(e) => {
+                  setActive(ind);
+                }}
+                className={`text-[#8B93A7] hover:text-[#E4E7EC] cursor-pointer `}
+                style={{
+                  color: ind === active ? COLORS["primary"] : undefined,
+                }}
+              >
+                {ele.name}
 
-              <span
-                className={`h-[1.5px] w-full  bg-[#3ECF8E] ${ind === active ? "block" : ""}`}
-              ></span>
-            </li>
+                <span
+                  className={`h-[1.5px] w-full  bg-[#3ECF8E] ${ind === active ? "block" : ""}`}
+                ></span>
+              </li>
+            </a>
           );
         })}
       </ul>

@@ -11,7 +11,7 @@ const MobileScreenNavbar = () => {
 
   return (
     <nav>
-      <div className=" flex justify-between items-center flex-wrap p-5  m-auto">
+      <div className=" flex justify-between items-center flex-wrap p-5 m-auto">
         <div className="group flex gap-x-3 items-center cursor-pointer">
           <p
             className={`text-accent font-mono font-[600] text-[18px] bg-[#131826] px-2 py-1 
@@ -41,13 +41,19 @@ const MobileScreenNavbar = () => {
           >
             {NAV_LIST.map((ele, ind) => {
               return (
-                <li
-                  key={ind}
-                  className={`text-[#8B93A7] hover:text-[#E4E7EC] cursor-pointer border-b-2 border-[#151B2A] 
-                  pb-2 w-[90%] m-auto`}
+                <a
+                  href={ele.link}
+                  className=""
+                  onClick={() => setOpenItems(false)}
                 >
-                  {ele.name}
-                </li>
+                  <li
+                    key={ind}
+                    className={`text-[#8B93A7] hover:text-[#E4E7EC] cursor-pointer border-b-2 border-[#151B2A] 
+                  pb-2 w-[90%] m-auto`}
+                  >
+                    {ele.name}
+                  </li>
+                </a>
               );
             })}
           </ul>

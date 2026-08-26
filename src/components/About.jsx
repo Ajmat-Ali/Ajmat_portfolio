@@ -2,7 +2,10 @@ import { ABOUT_ME } from "../data/homeData";
 
 const About = () => {
   return (
-    <div className="flex py-20 justify-between max-md:flex-col gap-y-10 border-b border-border-subtle">
+    <div
+      id="about"
+      className="scroll-mt-24 flex py-20 justify-between max-md:flex-col gap-y-10 border-b border-border-subtle"
+    >
       <div className="flex flex-col flex-1  gap-y-5 ">
         <p className="font-mono font-[400px] text-sm text-accent uppercase">
           {ABOUT_ME.index}

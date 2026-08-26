@@ -8,7 +8,10 @@ const Hero = () => {
     boolean: "#FB923C",
   };
   return (
-    <div className="flex items-center max-md:flex-col max-md:gap-y-10 border-b border-border-subtle py-20 ">
+    <div
+      id="hero"
+      className="scroll-mt-24 flex items-center max-md:flex-col max-md:gap-y-10 border-b border-border-subtle py-20 "
+    >
       <div className="flex-1">
         <div className="flex items-center gap-x-2 border w-max bg-[#131826] border border-[#1E2638] px-3 py-1 rounded-full mb-10">
           <span className="block h-2 w-2 bg-accent rounded-full"></span>

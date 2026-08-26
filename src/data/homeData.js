@@ -38,21 +38,27 @@ const LOGO = "AA";
 const NAV_LIST = [
   {
     name: "Home",
+    link: "#hero",
   },
   {
     name: "About",
+    link: "#about",
   },
   {
     name: "Skills",
+    link: "#skills",
   },
   {
     name: "Projects",
+    link: "#projects",
   },
   {
     name: "Journey",
+    link: "#journey",
   },
   {
     name: "Contact",
+    link: "#contact",
   },
 ];
 
@@ -178,4 +184,55 @@ const SKILL = {
   ],
 };
 
+// ============================================ Projects =================================================
+
 export { NAME, NAV_LIST, LOGO, HERO_CODE, ABOUT_ME, SKILL };
+
+// export const journeyTimeline = [
+//   {
+//     period: "2024 — Present",
+//     title: "DSA & System Design Specialization",
+//     institutionOrRole: "Independent Continuous Learning & Problem Solving",
+//     description:
+//       "Actively practicing Data Structures & Algorithms (Arrays, Hash Maps, Linked Lists, Trees, Dynamic Programming) to write optimal, clean code. Exploring microservice boundaries, caching strategies, and database indexing.",
+//     tags: [
+//       "Data Structures",
+//       "Algorithms",
+//       "Time Complexity",
+//       "System Architecture",
+//       "Clean Code",
+//     ],
+//     type: "focus",
+//   },
+//   {
+//     period: "2023 — 2024",
+//     title: "Full Stack MERN Engineering",
+//     institutionOrRole: "Project-Driven Software Development",
+//     description:
+//       "Mastered the MERN ecosystem by architecting end-to-end production web applications. Focused on robust REST APIs in Express, resilient document modeling in MongoDB, and fluid component architectures in React.",
+//     tags: [
+//       "React",
+//       "Node.js",
+//       "Express",
+//       "MongoDB",
+//       "REST APIs",
+//       "JWT Security",
+//     ],
+//     type: "stack",
+//   },
+//   {
+//     period: "2021 — 2024",
+//     title: "Bachelor of Computer Applications (BCA)",
+//     institutionOrRole: "University Degree",
+//     description:
+//       "Graduated with core coursework in Object-Oriented Programming, Database Management Systems (DBMS), Operating Systems, Data Structures, and Computer Networking.",
+//     tags: [
+//       "Computer Science",
+//       "DBMS",
+//       "OOP",
+//       "Software Engineering",
+//       "Networking",
+//     ],
+//     type: "education",
+//   },
+// ];
