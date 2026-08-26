@@ -2,6 +2,8 @@ import { useCallback, useState } from "react";
 import { NAME, LOGO, NAV_LIST } from "../../data/homeData";
 import { COLORS } from "../../theme/global.theme";
 import { Menu, X } from "lucide-react";
+import handleResumeClick from "../../utils/resumeDownload";
+
 const MobileScreenNavbar = () => {
   const [openItems, setOpenItems] = useState(false);
 
@@ -57,17 +59,19 @@ const MobileScreenNavbar = () => {
               );
             })}
           </ul>
-          <div
-            className={` px-3 py-1 text-sm  text-accent 
+          <a onClick={handleResumeClick}>
+            <div
+              className={` px-3 py-1 text-sm  text-accent 
               cursor-pointer rounded-sm`}
-          >
-            <button
-              className="font-mono text-accent hover:bg-accent hover:text-bg-dark py-2 mt-4 w-[90%]
-             border block m-auto rounded-md"
             >
-              View Resume
-            </button>
-          </div>
+              <button
+                className="font-mono text-accent hover:bg-accent hover:text-bg-dark py-2 mt-4 w-[90%]
+             border block m-auto rounded-md"
+              >
+                View Resume
+              </button>
+            </div>
+          </a>
         </div>
       ) : (
         ""

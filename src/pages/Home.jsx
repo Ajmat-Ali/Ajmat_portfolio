@@ -6,10 +6,24 @@ import Skill from "../components/Skill";
 import Projects from "../components/Projects";
 import Journey from "../components/Journey";
 import Contacts from "../components/Contacts";
+import { Footer } from "../components/Footer";
 
 const Home = () => {
+  const scrollToProjects = () => {
+    const el = document.getElementById("projects");
+    if (el) {
+      const topOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - topOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className=" bg-[#0B0F19] text-white pb-20">
+    <div className=" bg-[#0B0F19] text-white pb-2-0">
       <div className="bg-surface sticky top-0 z-99">
         <Navbar />
       </div>
@@ -20,6 +34,9 @@ const Home = () => {
         <Projects />
         <Journey />
         <Contacts />
+      </div>
+      <div className="bg-surface sticky top-0 z-99">
+        <Footer />
       </div>
     </div>
   );

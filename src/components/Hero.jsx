@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import { HERO_CODE } from "../data/homeData";
+import handleResumeClick from "../utils/resumeDownload";
 
 const Hero = () => {
   const tokenColor = {
@@ -33,14 +34,17 @@ const Hero = () => {
           problems end-to-end.
         </p>
         <div className=" flex  gap-x-5 font-[500px]">
-          <button
-            className="flex items-center gap-2 bg-accent text-bg-dark text-sm px-5 py-3 rounded-sm 
+          <a href="#projects">
+            <button
+              className="flex items-center gap-2 bg-accent text-bg-dark text-sm px-5 py-3 rounded-sm 
           cursor-pointer hover:bg-accent-hover max-sm:text-[13px] max-sm:px-3 "
-          >
-            View Projects
-            <ArrowUpRight size={14} />
-          </button>
+            >
+              View Projects
+              <ArrowUpRight size={14} />
+            </button>
+          </a>
           <button
+            onClick={handleResumeClick}
             className="font-mono text-sm border border-[#151A2A] px-5 py-3 cursor-pointer 
           hover:text-accent hover:border-accent max-sm:text-[13px] max-sm:px-3 "
           >
